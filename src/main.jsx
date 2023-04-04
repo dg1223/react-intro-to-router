@@ -5,29 +5,18 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import Header from "./components/Header/Header";
+import First from "./components/First/First";
 import Home from "./components/Home/Home";
-
-/* const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App></App>,
-  },
-  {
-    path: "/about",
-    element: <About></About>,
-  },
-  {
-    path: "/contact",
-    element: <Contact></Contact>,
-  },
-]); */
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
     children: [
+      {
+        path: "/",
+        element: <First></First>,
+      },
       {
         path: "about",
         element: <About></About>,
